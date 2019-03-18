@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChoisirPhotoActivity">
+        <activity android:name=".ChoisirPhotoActivity"></activity>
+        <activity android:name=".PageAccueil">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,7 +30,7 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".JeuxActivity"></activity>
+        <activity android:name=".JeuxActivity" />
     </application>
 
 </manifest>
