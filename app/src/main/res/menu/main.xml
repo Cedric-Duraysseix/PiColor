@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/red"
+        app:showAsAction="never"
+        android:title="Rouge"/>
+
+    <item
+        android:id="@+id/blue"
+        app:showAsAction="never"
+        android:title="Bleu"/>
+
+    <item
+        android:id="@+id/green"
+        app:showAsAction="never"
+        android:title="Vert"/>
+
+    <item
+        android:id="@+id/yellow"
+        app:showAsAction="never"
+        android:title="Jaune"/>
+
+    <item
+        android:id="@+id/magenta"
+        app:showAsAction="never"
+        android:title="Magenta"/>
+
+    <item
+        android:id="@+id/cyan"
+        app:showAsAction="never"
+        android:title="Cyan"/>
+
+    <item
+        android:id="@+id/white"
+        app:showAsAction="never"
+        android:title="Blanc"/>
+
+    <item
+        android:id="@+id/black"
+        app:showAsAction="never"
+        android:title="Noir"/>
+
+
+</menu>

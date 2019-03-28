@@ -102,8 +102,6 @@ public class ChoisirPhotoActivity extends AppCompatActivity {
         if (requestCode == RETOUR_IMPORT_PHOTO && resultCode == RESULT_OK) {
             Uri filePath = data.getData();
             photoPath = getPath(filePath);
-            image = BitmapFactory.decodeFile(photoPath);
-            photo.setImageBitmap(image);
            try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
                 photo.setImageBitmap(bitmap);
