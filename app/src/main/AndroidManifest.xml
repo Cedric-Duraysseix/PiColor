@@ -32,7 +32,7 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".JeuxActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".JeuxActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"
