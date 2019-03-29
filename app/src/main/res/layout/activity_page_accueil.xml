@@ -5,6 +5,7 @@
     android:id="@+id/titre"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".PageAccueil">
 
     <TextView
@@ -47,7 +48,7 @@
         app:srcCompat="@drawable/play" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/ButtonGalerie"
         android:layout_width="99dp"
         android:layout_height="71dp"
         android:layout_marginStart="8dp"
