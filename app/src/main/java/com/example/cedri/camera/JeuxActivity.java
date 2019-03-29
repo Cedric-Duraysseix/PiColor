@@ -8,10 +8,12 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -30,6 +32,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class JeuxActivity extends AppCompatActivity {
     private PaintView paintView;
@@ -58,18 +62,11 @@ public class JeuxActivity extends AppCompatActivity {
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bitmap capturedBitmap = screenShot(findViewById(R.id.jeuxActivity)); //screenshot est nul
+                Bitmap capturedBitmap = Screenshot.takescreenshotOfRootView(findViewById(R.id.jeuxActivity)); //screenshot est nul
                 savePicture(capturedBitmap,"Screenshot");
+                MediaStore.Images.Media.insertImage(getContentResolver(),capturedBitmap,"screen","description");
             }
         });
-    }
-
-    public Bitmap screenShot(View view) {
-        Bitmap bitmap = Bitmap.createBitmap(view.getWidth(),
-                view.getHeight(), Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(bitmap);
-        view.draw(canvas);
-        return bitmap;
     }
 
     private void savePicture(Bitmap bm, String imgName)
