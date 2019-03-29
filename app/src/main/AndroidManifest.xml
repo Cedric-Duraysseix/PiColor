@@ -13,8 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ChoisirPhotoActivity" />
-        <activity android:name=".PageAccueil">
+        <activity android:name=".ChoisirPhotoActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".PageAccueil" android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,13 +32,13 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".JeuxActivity" />
+        <activity android:name=".JeuxActivity" android:theme="@style/AppTheme.NoActionBar"/>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".Galerie"></activity>
+        <activity android:name=".Galerie" android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

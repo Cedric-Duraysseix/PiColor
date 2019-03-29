@@ -24,8 +24,6 @@ public class ChoisirPhotoActivity extends AppCompatActivity {
     private static final int RETOUR_IMPORT_PHOTO = 1;
     private static final int RETOUR_PRENDRE_PHOTO = 2;
 
-    private Button btnPhoto;
-    private Button impPhoto;
     private String photoPath = null;
     private ImageView photo;
     private ImageView add;
@@ -41,8 +39,8 @@ public class ChoisirPhotoActivity extends AppCompatActivity {
     }
 
     private void initActivity() {
-        btnPhoto = (Button) findViewById(R.id.prendrePhoto);
-        impPhoto = (Button) findViewById(R.id.importPhoto);
+        ImageView btnPhoto = (ImageView) findViewById(R.id.prendrePhoto);
+        ImageView impPhoto = (ImageView) findViewById(R.id.importPhoto);
         photo = (ImageView) findViewById(R.id.photo);
         add = (ImageView)findViewById(R.id.add);
 
